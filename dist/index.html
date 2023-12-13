@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milan - u2</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Jarallax CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="/assets/index-939e1948.css">
+  </head>
+
+  <body class="bg-main_bg_color font-Saira">
+    <!--================================================
+                        NAVBAR
+====================================================-->
+    <nav class="fixed_nav" id="navbar">
+      <div class="main_container nav_between">
+        <div><img class="w-[120px] md:w-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALEAAAAhCAYAAACWT0qGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAHGGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgOS4wLWMwMDEgNzkuMTRlY2I0MiwgMjAyMi8xMi8wMi0xOToxMjo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjIgKFdpbmRvd3MpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMy0wNi0xNFQxOTo1NjowMSswNzowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjMtMDYtMTRUMjM6MTQ6NTgrMDc6MDAiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjMtMDYtMTRUMjM6MTQ6NTgrMDc6MDAiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmRkODFmYTlhLTA0ZjctZTA0Ni1hZDQ0LTMxNjZmMGQ5ZDkxYyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpkZTcwYmU3NC1kYzQzLWM5NDQtYTZmNi03M2IxYmJhNGRhODYiIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkZTcwYmU3NC1kYzQzLWM5NDQtYTZmNi03M2IxYmJhNGRhODYiPiA8cGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8cmRmOkJhZz4gPHJkZjpsaT54bXAuZGlkOjhlMTgzM2RlLTBhZjgtYzk0Yy04NDQ1LTVhYTY4ZTczNmNkMjwvcmRmOmxpPiA8L3JkZjpCYWc+IDwvcGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8eG1wTU06SGlzdG9yeT4gPHJkZjpTZXE+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJjcmVhdGVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRlNzBiZTc0LWRjNDMtYzk0NC1hNmY2LTczYjFiYmE0ZGE4NiIgc3RFdnQ6d2hlbj0iMjAyMy0wNi0xNFQxOTo1NjowMSswNzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDI0LjIgKFdpbmRvd3MpIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowNDYxNTVhNi0yYjZmLTFlNDMtYmFmNC0yNjkyODEzZmNmNzEiIHN0RXZ0OndoZW49IjIwMjMtMDYtMTRUMjM6MTI6MjcrMDc6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyNC4yIChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGQ4MWZhOWEtMDRmNy1lMDQ2LWFkNDQtMzE2NmYwZDlkOTFjIiBzdEV2dDp3aGVuPSIyMDIzLTA2LTE0VDIzOjE0OjU4KzA3OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjQuMiAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++q9VEwAABIFJREFUeNrtnO3RpCAMgN8WaIH/98sWbGFbsAU6uLEFWrAFW6AFWnCug73bG7zhzSUhArrq4kzmPlyQkIcQIPr1fD5nIPrHz19fKfnzOwXLSsoRdRmkHWNBfR1SHyZGou+G+lgRPGcEZYbMtqmMZ43Cvq2q90vHwn61r0rg5VKdEAB2sGAmcK+6lid+6cw6++e2a6xcH3oJAYkvk6mrxIbwWbOwb6vqHRxJydVTjUqNninHSBlK2IMgZoG5IMQSG94B4r/O52srQK//zzUSUZ9n2rBIpkahYW3oMMPooIn6dFQWCmz/TP32YIhZJ1AR4pnpm6Teof0mIQ55rl/Z+NrinVKjphJsfqshhfX2SCwGryHjWXNpe3eEmKyjIsTZ+gqfp4lw8589JdPDwBi9FGLoESdkoPg9IK5lkAtAjA7OC0E8p9Yw0hhnYBZfWRCHBR32HFXqIQs88eMmEC8C/U8PMTHzexhiYo2aBMAu2AMKG7gwHtodEBPnxt9nhNggNnz9u9sBYp/YAhv2CiM4iI1ginpgvylc0Nmt4UDF3YRvBr4BxH3YPyYH6oG7E2avMIKFOBEDD1TnFULWJSCfdoLY5e5HnxlixoYuOqg6JcTSMCIJcXSqI/aWBQs6T5zkZB1+MAcAs3ThcweIGSDmA7fY+r3CCBHEALgp1XkFCzqsI8bcw4+Ed9LEvmN3R4hTe/tnW9htCSO2QKwCVKoSxCUnNKLFl8A7dblGvCLEDByngnhrGCGGeEvnVTihqxJjFXin7sYQK2IGOgXEOWHEWyAWbH1Jjhx9JYh1jVyNq0CcAKUEYhvaQIqwXkeEmX1KjobYUnvDTJnH1oVY4RSr7wpxFEotFSGukfhUlMl2GMTEgm7MDEFcJYj73DZdFWJm5+ddWWxdaXbgkRCb3BiUKNtXmmJ9ycndFSEm+vRdELtiiPdM3mjS5AhpndCkQdykSYO4SZMGcZMGceuEJg3iJk0axHu81pL65oJuxr8XxM8dhdto90G+JaWDez5+7w3cs8TGvw8HFpY49vZRdpQh2jZhXzsichE8NijCcbnkqz8K6Oth21J6g/zvkXmG2qpniT2A7MbZuyC2QXT40xH3NFFu/XSTQU7fHqHsgHzwZU0o0eHo1TP50yOElTn1ssTRrhfOHDoaECb8XUn1Bl9SWpB+0zAvRKpniT0+AuIIBIfdY+BfX68ZkSNMS+Q+Y8Yd4DFzKD/FgBPGVdELswvyTDHEYBAOW/VGvmdnhBBL9My2xydAvERTf0/cg9OXjbyNIzyOC+X6FFCMcW2U7fUgjLt6ck2AUxtiUu9oAJvQXjgwS/TMtscnhRMqY/p6cG8oQ++IGRZ4aEXMEuv9ATEum+e8kydG9SbSVY0EYoGexfa4fTiRAFwzgBmYkhl9fAUzmgvTp4pSAP9bkMC2xYsXLDyJxMUAAk+tha9VsRAzes9RLL3G+04KMaVnqT0+HWLqDWvY8TNYmMTTm0VChxmEMVbSttXAYJE4Ir9xTM6urwEx1DsKBxS2yJVCjOlZao+jIP4NjrtJ9A8Oo4MAAAAASUVORK5CYII=" alt="" /></div>
+        <div class="cursor-pointer" id="menu_icon">
+          <span
+            ><i class="ri-menu-line text-[30px] text-white" id="menuClose"></i
+          ></span>
+        </div>
+      </div>
+      <div class="hidden duration-200" id="menu">
+        <div
+          class="fixed top-0 left-0 right-0 w-full h-full bg-main_bg_color -z-[100] flex justify-center items-center"
+        >
+          <div>
+            <ul
+              class="text-center text-[20px] space-y-3 text-white font-[500] capitalize"
+            >
+              <li>
+                <a
+                  href="#home"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >about me</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#whatido"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >what i do</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#resume"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >my experience</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-btn_color duration-500 nav-link"
+                  >contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--================================================
+                        HEADER
+====================================================-->
+    <header class="hero_area jarallax" id="home">
+      <div class="gradient-bottom"></div>
+      <div class="main_container">
+        <div>
+          <p class="i_am_kyros_text">I Am Sophia Martinez</p>
+          <h1 class="typed_text"><span id="typed"></span></h1>
+          <div class="flex flex-wrap items-center md:gap-5">
+            <div class="relative p-3 France">
+              <div class="gray_line"></div>
+              <h5 class="coumtry_name">France</h5>
+              <p class="gray_text">Bodin, Chauveau</p>
+            </div>
+            <div class="relative p-3 USA">
+              <div class="gray_line"></div>
+              <h5 class="coumtry_name">USA</h5>
+              <p class="gray_text">Louisiana, Bayerfurt</p>
+            </div>
+            <div class="relative p-3 German">
+              <div class="gray_line"></div>
+              <h5 class="coumtry_name">German</h5>
+              <p class="gray_text">Hamburg, Dortmund</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--================================================
+                        MAIN SECTION
+      ====================================================-->
+    <main>
+      <!--================================================
+                    ABOUT ME SECTION
+      ====================================================-->
+      <section class="py-20 relative" id="about">
+        <div class="gradient-bottom"></div>
+        <div class="main_container">
+          <div>
+            <h4 class="heading_text">About Me</h4>
+            <div class="flex gap-2 items-center justify-center">
+              <div class="dashed_red"></div>
+              <div class="dashed_white"></div>
+              <div class="dashed_red"></div>
+            </div>
+          </div>
+          <div class="md:my-16 my-8">
+            <p class="max-w-4xl mx-auto gray_text text-center">
+              Hi, I'm Sophia Martinez, a passionate and dedicated fitness
+              instructor committed to helping others achieve their health and
+              fitness goals. With 10 years of experience in the fitness
+              industry, I believe in creating personalized and enjoyable workout
+              experiences that empower individuals to reach their full
+              potential.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h5 class="text-[18px] text-white">Personal Trainer</h5>
+              <div class="w-full h-[6px] rounded-md bg-[#303030] mt-4 relative">
+                <div
+                  class="w-[50px] h-[30px] bg-[#202020] absolute -top-[35px] left-[80%] rounded-sm flex justify-center items-center"
+                >
+                  <p class="text-white">80%</p>
+                </div>
+                <div class="bg-btn_color w-[80%] h-full rounded-md"></div>
+              </div>
+            </div>
+            <div>
+              <h5 class="text-[18px] text-white">Nutrition Specialist</h5>
+              <div class="w-full h-[6px] rounded-md bg-[#303030] mt-4 relative">
+                <div
+                  class="w-[50px] h-[30px] bg-[#202020] absolute -top-[35px] left-[80%] rounded-sm flex justify-center items-center"
+                >
+                  <p class="text-white">80%</p>
+                </div>
+                <div class="bg-btn_color w-[80%] h-full rounded-md"></div>
+              </div>
+            </div>
+            <div>
+              <h5 class="text-[18px] text-white">Fitness Coach</h5>
+              <div class="w-full h-[6px] rounded-md bg-[#303030] mt-4 relative">
+                <div
+                  class="w-[50px] h-[30px] bg-[#202020] absolute -top-[35px] left-[70%] rounded-sm flex justify-center items-center"
+                >
+                  <p class="text-white">70%</p>
+                </div>
+                <div class="bg-btn_color w-[70%] h-full rounded-md"></div>
+              </div>
+            </div>
+            <div>
+              <h5 class="text-[18px] text-white">Physical Terapist</h5>
+              <div class="w-full h-[6px] rounded-md bg-[#303030] mt-4 relative">
+                <div
+                  class="w-[50px] h-[30px] bg-[#202020] absolute -top-[35px] left-[70%] rounded-sm flex justify-center items-center"
+                >
+                  <p class="text-white">70%</p>
+                </div>
+                <div class="bg-btn_color w-[70%] h-full rounded-md"></div>
+              </div>
+            </div>
+            <div>
+              <h5 class="text-[18px] text-white">Athletic Trainer</h5>
+              <div class="w-full h-[6px] rounded-md bg-[#303030] mt-4 relative">
+                <div
+                  class="w-[50px] h-[30px] bg-[#202020] absolute -top-[35px] left-[82%] rounded-sm flex justify-center items-center"
+                >
+                  <p class="text-white">82%</p>
+                </div>
+                <div class="bg-btn_color w-[82%] h-full rounded-md"></div>
+              </div>
+            </div>
+            <div>
+              <h5 class="text-[18px] text-white">Corporate Wellness</h5>
+              <div class="w-full h-[6px] rounded-md bg-[#303030] mt-4 relative">
+                <div
+                  class="w-[50px] h-[30px] bg-[#202020] absolute -top-[35px] left-[82%] rounded-sm flex justify-center items-center"
+                >
+                  <p class="text-white">82%</p>
+                </div>
+                <div class="bg-btn_color w-[82%] h-full rounded-md"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about_area jarallax bg-aboutjaralax">
+        <div class="gradient-top"></div>
+        <div class="gradient-bottom"></div>
+        <div class="main_container">
+          <div class="md:max-w-4xl mx-auto">
+            <p>
+              <span
+                ><i
+                  class="ri-double-quotes-r md:text-[100px] text-[50px] leading-none text-btn_color"
+                ></i
+              ></span>
+            </p>
+            <p class="about_jaralax_para_text">
+              Do more than is required. What is the distance between someone who
+              achieves their goals consistently and those who spend their lives
+              and careers merely following? The extra mile.
+            </p>
+            <p class="text-[20px] text-btn_color">Milan</p>
+          </div>
+        </div>
+      </section>
+      <!--================================================
+                    WHAT I DO SECTION
+      ====================================================-->
+      <section class="pt-20" id="whatido">
+        <div class="main_container">
+          <div>
+            <h4 class="heading_text">What I Do</h4>
+            <div class="flex gap-2 items-center justify-center">
+              <div class="dashed_white"></div>
+              <div class="dashed_red"></div>
+              <div class="dashed_white"></div>
+            </div>
+          </div>
+          <div class="md:mt-16 mt-8">
+            <div class="grid lg:grid-cols-3 gap-5">
+              <div class="relative p-5" id="whatidoo">
+                <div class="gray_line"></div>
+                <div class="flex gap-5 items-center">
+                  <div>
+                    <i class="ri-check-line text-[50px] text-btn_color"></i>
+                  </div>
+                  <div>
+                    <h4 class="brand_heading">Personal Triner</h4>
+                  </div>
+                </div>
+                <p class="brand_para gray_text">
+                  Ex velit cupidatat magna voluptate deserunt quis et dolor
+                  adipisicing elit culpa ad exercitation proident irure deserunt
+                  irure.
+                </p>
+              </div>
+              <div class="relative p-5" id="whatidoo">
+                <div class="gray_line"></div>
+                <div class="flex gap-5 items-center">
+                  <div>
+                    <i class="ri-check-line text-[50px] text-btn_color"></i>
+                  </div>
+                  <div>
+                    <h4 class="brand_heading">Fitness Coach</h4>
+                  </div>
+                </div>
+                <p class="brand_para gray_text">
+                  Ex velit cupidatat magna voluptate deserunt quis et dolor
+                  adipisicing elit culpa ad exercitation proident irure deserunt
+                  irure.
+                </p>
+              </div>
+              <div class="relative p-5" id="whatidoo">
+                <div class="gray_line"></div>
+                <div class="flex gap-5 items-center">
+                  <div>
+                    <i class="ri-check-line text-[50px] text-btn_color"></i>
+                  </div>
+                  <div>
+                    <h4 class="brand_heading">Athletic Trainer</h4>
+                  </div>
+                </div>
+                <p class="brand_para gray_text">
+                  Ex velit cupidatat magna voluptate deserunt quis et dolor
+                  adipisicing elit culpa ad exercitation proident irure deserunt
+                  irure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--================================================
+                    PORTFOLIO SECTION
+      ====================================================-->
+      <section class="pt-20" id="portfolio">
+        <div class="main_container">
+          <div>
+            <h4 class="heading_text">Gallery</h4>
+            <div class="flex gap-2 items-center justify-center">
+              <div class="dashed_white"></div>
+              <div class="dashed_red"></div>
+              <div class="dashed_white"></div>
+            </div>
+          </div>
+          <div class="md:mt-16 mt-8">
+            <div class="clumn3">
+              <div
+                class="group overflow-hidden relative cursor-pointer mb-[20px] portfolio1"
+              >
+                <div class="portfolio_center_text">
+                  <h5 class="single_text">single image</h5>
+                </div>
+                <img
+                  class="portfolio_img"
+                  src="/assets/portfolio1-5e31ed4e.jpeg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden relative cursor-pointer mb-[20px] portfolio2"
+              >
+                <div class="portfolio_center_text">
+                  <h5 class="single_text">single image</h5>
+                </div>
+                <img
+                  class="portfolio_img"
+                  src="/assets/portfolio2-861e2d2e.jpeg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden relative cursor-pointer mb-[20px] portfolio3"
+              >
+                <div class="portfolio_center_text">
+                  <h5 class="single_text">single image</h5>
+                </div>
+                <img
+                  class="portfolio_img"
+                  src="/assets/portfolio3-b95f5632.jpeg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden relative cursor-pointer mb-[20px] portfolio4"
+              >
+                <div class="portfolio_center_text">
+                  <h5 class="single_text">single image</h5>
+                </div>
+                <img
+                  class="portfolio_img"
+                  src="/assets/portfolio4-3c65169a.jpeg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden relative cursor-pointer mb-[20px] portfolio5"
+              >
+                <div class="portfolio_center_text">
+                  <h5 class="single_text">single image</h5>
+                </div>
+                <img
+                  class="portfolio_img"
+                  src="/assets/portfolio5-f6ec4e56.jpeg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="group overflow-hidden relative cursor-pointer mb-[20px] portfolio6"
+              >
+                <div class="portfolio_center_text">
+                  <h5 class="single_text">single image</h5>
+                </div>
+                <img
+                  class="portfolio_img"
+                  src="/assets/portfolio6-bdbb2aaf.jpeg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--================================================
+                    MY RESUME SECTION
+      ====================================================-->
+      <section class="py-20" id="resume">
+        <div class="main_container">
+          <div>
+            <h4 class="heading_text">My Resume</h4>
+            <div class="flex gap-2 items-center justify-center">
+              <div class="dashed_white"></div>
+              <div class="dashed_red"></div>
+              <div class="dashed_white"></div>
+            </div>
+          </div>
+          <div class="md:mt-16 mt-8">
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="resume1">
+                <h3 class="experience_and_education_text">Experiences</h3>
+                <div class="mt-8 relative resume1">
+                  <div
+                    class="w-[1px] h-full left-[10px] bg-gray-500 absolute top-0"
+                  ></div>
+                  <div>
+                    <div
+                      class="bg-gradient-to-r from-[#2e2e2f] to-[#2d2f3200] py-2 rounded-md relative"
+                    >
+                      <div class="red_rounded_circle">
+                        <p>1</p>
+                      </div>
+                      <p class="gray_text ms-16">2014-now</p>
+                    </div>
+                    <div class="p-8">
+                      <h4
+                        class="md:text-[20px] text-[17px] text-white font-[600]"
+                      >
+                        Founder & Director
+                      </h4>
+                      <p class="i_am_kyros_text">Martinez Fitness</p>
+                      <p class="gray_text mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi tempora perferendis vero officia enim impedit
+                        voluptatem dignissimos, veniam ratione est alias rerum
+                        aperiam, nam aliquam reprehenderit iste dolor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative resume2">
+                  <div
+                    class="w-[1px] h-full left-[10px] bg-gray-500 absolute top-0"
+                  ></div>
+                  <div>
+                    <div
+                      class="bg-gradient-to-r from-[#2e2e2f] to-[#2d2f3200] py-2 rounded-md relative"
+                    >
+                      <div class="red_rounded_circle">
+                        <p>2</p>
+                      </div>
+                      <p class="gray_text ms-16">2014-now</p>
+                    </div>
+                    <div class="p-8">
+                      <h4
+                        class="md:text-[20px] text-[17px] text-white font-[600]"
+                      >
+                        Atlhetic Trainer
+                      </h4>
+                      <p class="i_am_kyros_text">Four Seasons Hotel</p>
+                      <p class="gray_text mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi tempora perferendis vero officia enim impedit
+                        voluptatem dignissimos, veniam ratione est alias rerum
+                        aperiam, nam aliquam reprehenderit iste dolor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative resume3">
+                  <div>
+                    <div
+                      class="bg-gradient-to-r from-[#2e2e2f] to-[#2d2f3200] py-2 rounded-md relative"
+                    >
+                      <div class="red_rounded_circle">
+                        <p>3</p>
+                      </div>
+                      <p class="gray_text ms-16">2014-now</p>
+                    </div>
+                    <div class="p-8">
+                      <h4
+                        class="md:text-[20px] text-[17px] text-white font-[600]"
+                      >
+                        Fitness Coach
+                      </h4>
+                      <p class="i_am_kyros_text">Pullman Hotel</p>
+                      <p class="gray_text mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi tempora perferendis vero officia enim impedit
+                        voluptatem dignissimos, veniam ratione est alias rerum
+                        aperiam, nam aliquam reprehenderit iste dolor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="resume2">
+                <h3 class="experience_and_education_text">Education</h3>
+                <div class="mt-8 relative resume1">
+                  <div
+                    class="w-[1px] h-full left-[10px] bg-gray-500 absolute top-0"
+                  ></div>
+                  <div>
+                    <div
+                      class="bg-gradient-to-r from-[#2e2e2f] to-[#2d2f3200] py-2 rounded-md relative"
+                    >
+                      <div class="red_rounded_circle">
+                        <p>1</p>
+                      </div>
+                      <p class="gray_text ms-16">2014-now</p>
+                    </div>
+                    <div class="p-8">
+                      <h4
+                        class="md:text-[20px] text-[17px] text-white font-[600]"
+                      >
+                        Specialty Certifications
+                      </h4>
+                      <p class="i_am_kyros_text">New York University</p>
+                      <p class="gray_text mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi tempora perferendis vero officia enim impedit
+                        voluptatem dignissimos, veniam ratione est alias rerum
+                        aperiam, nam aliquam reprehenderit iste dolor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative resume2">
+                  <div
+                    class="w-[1px] h-full left-[10px] bg-gray-500 absolute top-0"
+                  ></div>
+                  <div>
+                    <div
+                      class="bg-gradient-to-r from-[#2e2e2f] to-[#2d2f3200] py-2 rounded-md relative"
+                    >
+                      <div class="red_rounded_circle">
+                        <p>2</p>
+                      </div>
+                      <p class="gray_text ms-16">2014-now</p>
+                    </div>
+                    <div class="p-8">
+                      <h4
+                        class="md:text-[20px] text-[17px] text-white font-[600]"
+                      >
+                        Certified Personal Trainer
+                      </h4>
+                      <p class="i_am_kyros_text">University of London</p>
+                      <p class="gray_text mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi tempora perferendis vero officia enim impedit
+                        voluptatem dignissimos, veniam ratione est alias rerum
+                        aperiam, nam aliquam reprehenderit iste dolor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="relative resume3">
+                  <div>
+                    <div
+                      class="bg-gradient-to-r from-[#2e2e2f] to-[#2d2f3200] py-2 rounded-md relative"
+                    >
+                      <div class="red_rounded_circle">
+                        <p>3</p>
+                      </div>
+                      <p class="gray_text ms-16">2014-now</p>
+                    </div>
+                    <div class="p-8">
+                      <h4
+                        class="md:text-[20px] text-[17px] text-white font-[600]"
+                      >
+                        Practical Experience
+                      </h4>
+                      <p class="i_am_kyros_text">University of Sydney</p>
+                      <p class="gray_text mt-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Animi tempora perferendis vero officia enim impedit
+                        voluptatem dignissimos, veniam ratione est alias rerum
+                        aperiam, nam aliquam reprehenderit iste dolor.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-myresumejaralax py-20 jarallax md:h-[40vh] flex items-center"
+      >
+        <div class="gradient-top"></div>
+        <div class="gradient-bottom"></div>
+        <div class="main_container">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center" id="count1">
+              <h4 class="text-[30px] font-[700] text-white">25</h4>
+              <p class="gray_text">AWARDS WINNING</p>
+            </div>
+            <div class="text-center" id="count2">
+              <h4 class="text-[30px] font-[700] text-white">10</h4>
+              <p class="gray_text">YEARS OF EXPERIENCES</p>
+            </div>
+            <div class="text-center" id="count3">
+              <h4 class="text-[30px] font-[700] text-white">12</h4>
+              <p class="gray_text">CERTIFICATES</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--================================================
+                    BLOG  SECTION
+      ====================================================-->
+      <section class="py-20" id="blog">
+        <div class="main_container">
+          <div>
+            <h4 class="heading_text">Recent Blog</h4>
+            <div class="flex gap-2 items-center justify-center">
+              <div class="dashed_white"></div>
+              <div class="dashed_red"></div>
+              <div class="dashed_white"></div>
+            </div>
+          </div>
+          <div class="md:mt-16 mt-8">
+            <div class="owl-carousel owl-theme">
+              <div class="item group cursor-pointer relative p-8" id="blog1">
+                <div
+                  class="absolute top-0 left-0 right-0 w-full h-full -z-[1] bg-gradient-to-b from-[#2d85f077] to-[#2d85f000]"
+                ></div>
+                <h4 class="blog_heading">how to make better user interface</h4>
+                <p class="gray_text  my-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempore eveniet, tenetur libero officiis molestiae dolor,
+                  explicabo veniam asperiores suscipit aut recusandae provident
+                  laboriosam in dignissimos.
+                </p>
+                <p class="text-btn_color">2 days ago</p>
+              </div>
+              <div class="item group cursor-pointer relative p-8" id="blog2">
+                <div
+                  class="absolute top-0 left-0 right-0 w-full h-full -z-[1] bg-gradient-to-b from-[#2d85f077] to-[#2d85f000]"
+                ></div>
+                <h4 class="blog_heading">how to make better user interface</h4>
+                <p class="gray_text my-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempore eveniet, tenetur libero officiis molestiae dolor,
+                  explicabo veniam asperiores suscipit aut recusandae provident
+                  laboriosam in dignissimos.
+                </p>
+                <p class="text-btn_color">2 days ago</p>
+              </div>
+              <div class="item group cursor-pointer relative p-8" id="blog3">
+                <div
+                  class="absolute top-0 left-0 right-0 w-full h-full -z-[1] bg-gradient-to-b from-[#2d85f077] to-[#2d85f000]"
+                ></div>
+                <h4 class="blog_heading">how to make better user interface</h4>
+                <p class="gray_text my-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempore eveniet, tenetur libero officiis molestiae dolor,
+                  explicabo veniam asperiores suscipit aut recusandae provident
+                  laboriosam in dignissimos.
+                </p>
+                <p class="text-btn_color">2 days ago</p>
+              </div>
+              <div class="item group cursor-pointer relative p-8" id="blog4">
+                <div
+                  class="absolute top-0 left-0 right-0 w-full h-full -z-[1] bg-gradient-to-b from-[#2d85f077] to-[#2d85f000]"
+                ></div>
+                <h4 class="blog_heading">how to make better user interface</h4>
+                <p class="gray_text my-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempore eveniet, tenetur libero officiis molestiae dolor,
+                  explicabo veniam asperiores suscipit aut recusandae provident
+                  laboriosam in dignissimos.
+                </p>
+                <p class="text-btn_color">2 days ago</p>
+              </div>
+              <div class="item group cursor-pointer p-8 relative" id="blog5">
+                <div
+                  class="absolute top-0 left-0 right-0 w-full h-full -z-[1] bg-gradient-to-b from-[#2d85f077] to-[#2d85f000]"
+                ></div>
+                <h4 class="blog_heading">how to make better user interface</h4>
+                <p class="gray_text my-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempore eveniet, tenetur libero officiis molestiae dolor,
+                  explicabo veniam asperiores suscipit aut recusandae provident
+                  laboriosam in dignissimos.
+                </p>
+                <p class="text-btn_color">2 days ago</p>
+              </div>
+              <div class="item group cursor-pointer p-8 relative" id="blog6">
+                <div
+                  class="absolute top-0 left-0 right-0 w-full h-full -z-[1] bg-gradient-to-b from-[#2d85f077] to-[#2d85f000]"
+                ></div>
+                <h4 class="blog_heading">how to make better user interface</h4>
+                <p class="gray_text my-2">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Tempore eveniet, tenetur libero officiis molestiae dolor,
+                  explicabo veniam asperiores suscipit aut recusandae provident
+                  laboriosam in dignissimos.
+                </p>
+                <p class="text-btn_color">2 days ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--================================================
+                    CONTACT  SECTION
+      ====================================================-->
+      <section
+        class="py-20 jarallax md:h-screen bg-contactjaralax"
+        id="contact"
+      >
+        <div class="gradient-top"></div>
+        <div class="gradient-bottom"></div>
+        <div class="main_container">
+          <div>
+            <h4 class="heading_text">Contact Me</h4>
+            <div class="flex gap-2 items-center justify-center">
+              <div class="dashed_white"></div>
+              <div class="dashed_red"></div>
+              <div class="dashed_white"></div>
+            </div>
+          </div>
+          <div class="md:mt-16 mt-8" id="from">
+            <form class="max-w-4xl mx-auto space-y-8">
+              <div class="md:grid-cols-3 grid gap-5">
+                <div id="input1">
+                  <input
+                    class="input_design"
+                    type="text"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div id="input2">
+                  <input
+                    class="input_design"
+                    type="text"
+                    placeholder="Your Email"
+                  />
+                </div>
+                <div id="input3">
+                  <input
+                    class="input_design"
+                    type="text"
+                    placeholder="Your Phone"
+                  />
+                </div>
+              </div>
+              <div id="input4">
+                <textarea
+                  class="input_design"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <div class="flex justify-center" id="btn">
+                <button class="bg-btn_color px-8 py-2 text-white">
+                  Send Message
+                </button>
+              </div>
+              <div class="flex justify-between md:flex-row flex-col gap-8">
+                <div class="text-center" id="email">
+                  <h4 class="text-[18px] text-white font-[600]">Email Me</h4>
+                  <p class="gray_text">contact@kyrosnoriaki.com</p>
+                </div>
+                <div class="text-center" id="phone">
+                  <h4 class="text-[18px] text-white font-[600]">Call Me</h4>
+                  <p class="gray_text">+1 700 333 92 96</p>
+                </div>
+                <div class="text-center" id="address">
+                  <h4 class="text-[18px] text-white font-[600]">Address</h4>
+                  <p class="gray_text">
+                    Collins Street West, Louisiana, <br />
+                    Bayerfurt, USA
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--================================================
+                    FOOTER  SECTION
+    ====================================================-->
+    <footer>
+      <div class="main_container">
+        <div class="footer_between py-8">
+          <div id="footer_text">
+            <p class="gray_text">© Copyright 2023 - Kyros by Designesia</p>
+          </div>
+          <div class="flex gap-5" id="footer_icon">
+            <div class="rounded_circle group">
+              <a href=""
+                ><i
+                  class="ri-facebook-fill text-white group-hover:text-white duration-500 text-[20px]"
+                ></i
+              ></a>
+            </div>
+            <div class="rounded_circle group">
+              <a href=""
+                ><i
+                  class="ri-twitter-fill text-white group-hover:text-white duration-500 text-[20px]"
+                ></i
+              ></a>
+            </div>
+            <div class="rounded_circle group">
+              <a href=""
+                ><i
+                  class="ri-linkedin-fill text-white group-hover:text-white duration-500 text-[20px]"
+                ></i
+              ></a>
+            </div>
+            <div class="rounded_circle group">
+              <a href=""
+                ><i
+                  class="ri-pinterest-fill text-white group-hover:text-white duration-500 text-[20px]"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- OWL CAROUSEL CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Jarallax JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <!-- Jarallax JS: Optional video extension -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      // ==============   TYPED JS   ===================
+      var typed = new Typed("#typed", {
+        strings: [
+          "PHYSICAL THERAPIST",
+          "NUTRITION SPECIALIST",
+          "FRECORPORATE WELLNESS",
+        ],
+        typeSpeed: 70,
+        backSpeed: 90,
+        loop: true,
+      });
+
+      // ============= OWL CAROUSEL ===================
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 30,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+          600: {
+            items: 2,
+            nav: false,
+          },
+          1000: {
+            items: 3,
+            nav: false,
+            loop: false,
+          },
+        },
+      });
+
+      // ==============   JARALAX  JS   ===================
+      jarallax(document.querySelectorAll(".jarallax"), {
+        speed: 0.3,
+      });
+
+      // ON SCROLL NAVBAR COLOR CHANGE
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 80 ||
+          document.documentElement.scrollTop > 80
+        ) {
+          document.getElementById("navbar").style.backgroundColor = "#15171a";
+        } else {
+          document.getElementById("navbar").style.backgroundColor = "";
+        }
+      }
+
+      // WHEN YOU CLICK ON MENU ICON THEN MENU WILL OPEN OR HIDDEN
+      let menuIcon = document.querySelector("#menu_icon");
+      menuIcon.addEventListener("click", function () {
+        if (
+          document
+            .querySelector("#menuClose")
+            .classList.contains("ri-menu-line")
+        ) {
+          document.querySelector("#menuClose").classList.remove("ri-menu-line");
+          document.querySelector("#menuClose").classList.add("ri-close-line");
+        } else {
+          document
+            .querySelector("#menuClose")
+            .classList.remove("ri-close-line");
+          document.querySelector("#menuClose").classList.add("ri-menu-line");
+        }
+        document.querySelector("#menu").classList.toggle("hidden");
+      });
+
+      // WHEN YOU CLICK IN NAVMENU THEN WILL HIDDEN MENU
+      const navLink = document.querySelectorAll(".nav-link");
+      navLink.forEach((link) =>
+        link.addEventListener("click", () => {
+          document.querySelector("#menu").classList.add("hidden");
+          document.querySelector("#menuClose").classList.add("ri-menu-line");
+        })
+      );
+    </script>
+  </body>
+</html>
